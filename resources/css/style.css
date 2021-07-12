@@ -1,0 +1,297 @@
+/* start main setting */
+*
+{
+    list-style-type: none;
+    box-sizing: border-box;
+    text-decoration: none;
+    text-transform: capitalize;
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.layer
+{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 2;
+    background-color:#415460;
+    opacity: .3;
+}
+:root
+{
+    --main-color:#FFF;
+    --second:#25b5b1;
+    --hover-color:#F07D7F;
+}
+/* end main setting */
+/* stert navbar */
+nav
+{
+    width: 100%;
+    height: 8vh;
+    background-color:#f5f9f8;
+    padding-top: .3em;
+    overflow: hidden;
+
+}
+
+nav .left ul li
+{
+    display: inline-block;
+    margin-right: 5%;
+    width:9%;
+    height:5vh;
+    line-height: 2em;
+    border-radius: 5px;
+    margin-top: .2em;
+    text-align: center;
+    cursor: pointer;
+}
+nav .left ul li a
+{
+    color:#222;
+    font-size: 1.1em;
+
+}
+nav .left ul li a:hover
+{
+    color: var(--second);
+    text-decoration: none;
+}
+nav .left ul li:last-child
+{
+    background-color: var(--second);
+    color: #FFF;
+    margin-right: 4%;
+}
+nav .left ul li:last-child:hover
+{
+    background-color: var(--hover-color);
+    color: var(--main-color);
+}
+nav .left ul li:last-child a
+{
+    color: #FFF;
+}
+/* end navbar */
+/* start home page */
+figure
+{
+    position: relative;
+    z-index: 1;
+    height: 92vh;
+    background: url(../images/main.jpg) ;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+}
+figure .heading
+{
+    position: absolute;
+    z-index: 3;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+figure .heading h2
+{
+    color: #FFF;
+    font-size: 1.7rem;
+}
+/* end home page */
+/* start about section */
+.about__figure
+{
+    background: url(../images/about.jpg);
+    background-size: 40vw 65vh;
+    background-repeat: no-repeat;
+}
+.about__content
+{
+    line-height: 10vh;
+}
+.about__content h2
+{
+    color: #415460;
+}
+.about__content h2::after
+{
+    content: "";
+    display: block;
+    width:25%;
+    height: .5vh;
+    margin-top:.5em;
+    background-color: #415460;
+}
+.about__content p
+{
+    font-size: 1.2em;
+    font-weight: 500;
+    color: #555;
+}
+/* end about section */
+/* start form section */
+section
+{
+    height:60vh;
+    overflow: hidden;
+}
+.form-figure
+{
+    background: url(../images/form.jpg);
+    height:60vh;
+    background-size: cover;
+    border-radius: 5px;
+}
+.button
+{
+    background-color: #25b5b1;
+    color: #FFF;
+}
+.button:hover
+{
+    background-color: #F07D7F;
+    color: #FFF;
+}
+/* end form section */
+/* start footer section */
+footer
+{
+    height: 10vh;
+    background-color: #f5f9f8;
+}
+footer .social__links
+{
+    cursor: pointer;
+}
+footer .social__links li
+{
+    display: inline-block;
+    color: #25b5b1;
+    font-size: 1.2em;
+}
+footer .social__links li:hover
+{
+    color: #F07D7F;
+}
+/* end footer section */
+@media(max-width:992px)
+{
+    nav .left ul li
+    {
+        width: 12%;
+    }
+    figure
+    {
+        height:75vh;
+    }
+    figure .heading h2
+    {
+        font-size: 1.3rem;
+    }
+    .about__figure
+    {
+        background-size: 50vw 52vh;
+        background-repeat: no-repeat;
+    }
+    .about__content h2::after
+    {
+        width: 35%;
+    }
+    .about__content p
+    {
+        font-size: 1.1rem;
+    }
+    .form
+    {
+        height: 15vh;
+    }
+}
+@media(max-width:768px)
+{
+    nav .left ul li
+    {
+        width: 15%;
+    }
+    figure
+    {
+        height:70vh;
+    }
+    figure .heading h2
+    {
+        font-size: 1rem;
+    }
+    .about
+    {
+        height: 30vh;
+    }
+    .about__content h2::after
+    {
+        width: 20%;
+    }
+    .about__content p
+    {
+        font-size: 1.2rem;
+    }
+    .form
+    {
+        height: 20vh;
+    }
+}
+@media(max-width:576px)
+{
+    nav .left ul li
+    {
+        width: 25%;
+    }
+    figure
+    {
+        height:60vh;
+    }
+    figure .heading
+    {
+        width: 100%;
+        text-align: center;
+        font-size: 1.5rem;
+    }
+    .about__content p
+    {
+        font-size: 1rem;
+    }
+    .about__content h2::after
+    {
+        width: 32%;
+    }
+    .form
+    {
+        height: 20vh;
+    }
+    .form__content input[type="file"]
+    {
+        padding-bottom: 1rem;
+    }
+}
+@media(max-width:350px)
+{
+    nav .left ul li
+    {
+        width: 30%;
+    }
+    figure
+    {
+        height:55vh;
+    }
+    .about__content p
+    {
+        font-size: .9rem;
+    }
+    .about__content h2::after
+    {
+        width: 38%;
+    }
+    .form
+    {
+        height: 15vh;
+    }
+}
